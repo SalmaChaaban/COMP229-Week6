@@ -7,7 +7,6 @@ content-type: application/json
 }
 
 ###
-
 POST http://localhost:3000/api/auth/register HTTP/1.1
 content-type: application/json
 
@@ -19,7 +18,44 @@ content-type: application/json
 }
 
 ###
-
 GET http://localhost:3000/api/auth/logout HTTP/1.1
 content-type: application/json
 
+###
+GET http://localhost:3000/api/movies/list HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTMzMDhkOTUwOWUyMDFmOWJkM2FiNCIsImRpc3BsYXlOYW1lIjoiRGF2aWQgQ3VsdGFyZCIsInVzZXJuYW1lIjoiZGN1bHRhcmQiLCJpYXQiOjE2NjcxNDk1NTcsImV4cCI6MTY2Nzc1NDM1N30.rPAGZ3cd78-rZZJXsMd3NzTOIuhmO_CAdzXB1_29Ocw
+###
+GET http://localhost:3000/api/movies/635eac7fd3b49209f20731a0 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTMzMDhkOTUwOWUyMDFmOWJkM2FiNCIsImRpc3BsYXlOYW1lIjoiRGF2aWQgQ3VsdGFyZCIsInVzZXJuYW1lIjoiZGN1bHRhcmQiLCJpYXQiOjE2NjcxNDk1NTcsImV4cCI6MTY2Nzc1NDM1N30.rPAGZ3cd78-rZZJXsMd3NzTOIuhmO_CAdzXB1_29Ocw
+###
+POST http://localhost:3000/api/movies/add HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTMzMDhkOTUwOWUyMDFmOWJkM2FiNCIsImRpc3BsYXlOYW1lIjoiRGF2aWQgQ3VsdGFyZCIsInVzZXJuYW1lIjoiZGN1bHRhcmQiLCJpYXQiOjE2NjcxNDk1NTcsImV4cCI6MTY2Nzc1NDM1N30.rPAGZ3cd78-rZZJXsMd3NzTOIuhmO_CAdzXB1_29Ocw
+
+{
+    "name": "Titanic 2", 
+    "year": "2002", 
+    "director": "James Cameron",
+    "genre": "Romance",
+    "runtime": 300
+}
+
+###
+PUT http://localhost:3000/api/movies/edit/635eaf77d4ed11cd65780d84 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTMzMDhkOTUwOWUyMDFmOWJkM2FiNCIsImRpc3BsYXlOYW1lIjoiRGF2aWQgQ3VsdGFyZCIsInVzZXJuYW1lIjoiZGN1bHRhcmQiLCJpYXQiOjE2NjcxNDk1NTcsImV4cCI6MTY2Nzc1NDM1N30.rPAGZ3cd78-rZZJXsMd3NzTOIuhmO_CAdzXB1_29Ocw
+
+{
+    "name": "Titanic 2", 
+    "year": "2022", 
+    "director": "James Cameron",
+    "genre": "Horror",
+    "runtime": 600
+}
+
+###
+DELETE http://localhost:3000/api/movies/delete/635eac7fd3b49209f20731a0 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTMzMDhkOTUwOWUyMDFmOWJkM2FiNCIsImRpc3BsYXlOYW1lIjoiRGF2aWQgQ3VsdGFyZCIsInVzZXJuYW1lIjoiZGN1bHRhcmQiLCJpYXQiOjE2NjcxNDk1NTcsImV4cCI6MTY2Nzc1NDM1N30.rPAGZ3cd78-rZZJXsMd3NzTOIuhmO_CAdzXB1_29Ocw
