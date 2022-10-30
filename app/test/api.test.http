@@ -1,0 +1,25 @@
+POST http://localhost:3000/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "dcultard",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:3000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mschumacher",
+    "password": "123456",
+    "emailAddress": "mschumacher@f1.com",
+    "displayName": "Michael Schumacher"
+}
+
+###
+
+GET http://localhost:3000/api/auth/logout HTTP/1.1
+content-type: application/json
+
